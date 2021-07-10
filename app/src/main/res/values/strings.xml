@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Exam Assist</string>
+    <string name="zoom_out">Zoom Out</string>
+    <string name="onboarding_one">A toolkit to conquer your semester exams</string>
+    <string name="onboarding_two">Access Notes, Exam papers and syllabus on single click</string>
+    <string name="onboarding_three">Share your resources and and get rewards </string>
+    <string name="notes">Notes</string>
+    <string name="papers">Papers</string>
+    <string name="syllabus">Syllabus</string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+</resources>
