@@ -34,7 +34,7 @@ class OnBoardingActivity : AppCompatActivity() {
         mAdapter = ViewsSliderAdapter()
         binding.onBoardingVP.adapter = mAdapter
         binding.onBoardingVP.registerOnPageChangeCallback(pageChangeCallback)
-        binding.btnNext.setOnClickListener { _ ->
+        binding.btnNextScreen.setOnClickListener { _ ->
             val current: Int = getItem(+1)
             if (current < layouts.size) {
                 binding.onBoardingVP.currentItem = current
@@ -44,7 +44,7 @@ class OnBoardingActivity : AppCompatActivity() {
         }
         binding.wormDotsIndicator.setViewPager2(binding.onBoardingVP)
         binding.onBoardingVP.setPageTransformer(AntiClockSpinTransformation())
-        binding.btnNext.setOnClickListener{startActivity(Intent(this, DashboardActivity::class.java))}
+        binding.btnNextScreen.setOnClickListener{startActivity(Intent(this, DashboardActivity::class.java))}
     }
 /*
 Shortlisted animations
