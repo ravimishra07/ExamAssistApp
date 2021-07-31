@@ -27,6 +27,8 @@ class NotesAdapter(private val context: Context, private val data: Array<PaperRe
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val foodlist: PaperResponse = data[position]
         holder.txt_name.text = foodlist.name
+        val firstLetter = foodlist.name.substring(0,1)
+        holder.tv_name_icon.text = firstLetter
         holder.ll_notes.background = ViewUtils.instance.drawCircle(
             ContextCompat.getColor(
                 context,
@@ -37,5 +39,7 @@ class NotesAdapter(private val context: Context, private val data: Array<PaperRe
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val txt_name = itemView.findViewById<TextView>(R.id.txt_name)
         val ll_notes = itemView.findViewById<LinearLayout>(R.id.ll_notes_icon)
+        val tv_name_icon = itemView.findViewById<TextView>(R.id.tv_name_icon)
+
     }
 }
