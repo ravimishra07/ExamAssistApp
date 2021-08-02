@@ -11,7 +11,9 @@ import com.examassistapp.R
 import com.examassistapp.databinding.ActivityDashboardBinding
 import com.examassistapp.databinding.BaseLayoutBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class DashboardActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDashboardBinding
     private lateinit var bindingBase: BaseLayoutBinding
