@@ -3,6 +3,7 @@ package com.examassistapp.views
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import com.examassistapp.Fragments.NotesFragment
 import com.examassistapp.Fragments.PaperFragment
@@ -26,6 +27,7 @@ class DashboardActivity : AppCompatActivity() {
         bindingBase = binding.baseLayout
         context = this
         setContentView(view)
+        Log.d("Stan","Stan")
 //        setSupportActionBar(bindingBase.toolbar)
         bindingBase.bottomNavigationView.background = null
         bindingBase.bottomNavigationView.menu.getItem(3).isEnabled = false
