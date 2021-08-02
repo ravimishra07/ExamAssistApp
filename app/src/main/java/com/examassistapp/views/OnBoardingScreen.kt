@@ -12,7 +12,9 @@ import androidx.viewpager2.widget.ViewPager2
 import com.examassistapp.R
 import com.examassistapp.animation.animationtypes.AntiClockSpinTransformation
 import com.examassistapp.databinding.ActivityOnBoardingScreenBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class OnBoardingActivity : AppCompatActivity() {
     private lateinit var context: Context
     private var mAdapter: ViewsSliderAdapter? = null

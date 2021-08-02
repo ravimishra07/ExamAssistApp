@@ -27,6 +27,7 @@
                 android:layout_margin="5dp"
                 android:background="@color/colorPrimary">
                 <TextView
+                    android:id="@+id/tv_name_icon"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:maxLength="1"
@@ -90,7 +91,7 @@
                         android:layout_marginLeft="5dp"
                         android:text="12-07-2021"
                         android:fontFamily="@font/nunito_regular"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -109,7 +110,7 @@
                         android:layout_gravity="center"
                         android:singleLine="true"
                         android:text="Ravi mishra | 25 page"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -120,7 +121,7 @@
                         android:gravity="center"
                         android:layout_gravity="center"
                         android:text="120"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -132,15 +133,16 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="30dp"
+                        android:layout_width="40dp"
                         android:layout_height="wrap_content"
                         android:text="Tags"
+                        android:padding="3dp"
                         android:singleLine="true"
                         android:background="@color/colorAccent"
                         android:textColor="@color/white"
                         android:textAlignment="center"
                         android:fontFamily="@font/nunito_regular"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -150,7 +152,7 @@
                         android:layout_marginStart="4dp"
                         android:layout_marginEnd="4dp"
                         android:fontFamily="@font/nunito_regular"
-                        android:textSize="10sp" />
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -164,34 +166,34 @@
 
                     <ImageView
                         android:id="@+id/iv_star_1"
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
+                        android:layout_width="@dimen/ic_star_dimes"
+                        android:layout_height="@dimen/ic_star_dimes"
                         android:layout_marginStart="3dp"
                         android:src="@drawable/ic_star_enabled"/>
                     <ImageView
                         android:id="@+id/iv_star_2"
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
+                        android:layout_width="@dimen/ic_star_dimes"
+                        android:layout_height="@dimen/ic_star_dimes"
                         android:layout_marginStart="3dp"
 
                         android:src="@drawable/ic_star_enabled"/>
                     <ImageView
                         android:id="@+id/iv_star_3"
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
+                        android:layout_width="@dimen/ic_star_dimes"
+                        android:layout_height="@dimen/ic_star_dimes"
                         android:layout_marginStart="3dp"
                         android:src="@drawable/ic_star_enabled"/>
                     <ImageView
                         android:id="@+id/iv_star_4"
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
+                        android:layout_width="@dimen/ic_star_dimes"
+                        android:layout_height="@dimen/ic_star_dimes"
                         android:layout_marginStart="3dp"
 
                         android:src="@drawable/ic_star_enabled"/>
                     <ImageView
                         android:id="@+id/iv_star_5"
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
+                        android:layout_width="@dimen/ic_star_dimes"
+                        android:layout_height="@dimen/ic_star_dimes"
                         android:layout_marginStart="3dp"
 
                         android:src="@drawable/ic_star_enabled"/>
