@@ -27,7 +27,6 @@ class DashboardActivity : AppCompatActivity() {
         bindingBase = binding.baseLayout
         context = this
         setContentView(view)
-        Log.d("Stan","Stan")
 //        setSupportActionBar(bindingBase.toolbar)
         bindingBase.bottomNavigationView.background = null
         bindingBase.bottomNavigationView.menu.getItem(3).isEnabled = false
