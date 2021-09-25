@@ -12,9 +12,8 @@ import com.examassistapp.R
 import com.examassistapp.databinding.ActivityDashboardBinding
 import com.examassistapp.databinding.BaseLayoutBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+//@AndroidEntryPoint
 class DashboardActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDashboardBinding
     private lateinit var bindingBase: BaseLayoutBinding
@@ -30,7 +29,7 @@ class DashboardActivity : AppCompatActivity() {
 //        setSupportActionBar(bindingBase.toolbar)
         bindingBase.bottomNavigationView.background = null
         bindingBase.bottomNavigationView.menu.getItem(3).isEnabled = false
-        bindingBase.bottomNavigationView.setOnItemSelectedListener(bottomNavMethod)
+       // bindingBase.bottomNavigationView.setOnItemSelectedListener(bottomNavMethod)
         loadFragments(NotesFragment())
     }
 

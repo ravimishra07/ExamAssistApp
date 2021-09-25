@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.examassistapp.Models.PaperResponse
+import com.examassistapp.models.PaperResponse
 import com.examassistapp.R
 
 class PaperAdapter(private val context: Context, private val data: Array<PaperResponse>) : RecyclerView.Adapter<PaperAdapter.ViewHolder> () {
