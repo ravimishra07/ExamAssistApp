@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.examassistapp.Adapters.PaperAdapter
-import com.examassistapp.Models.PaperResponse
+import com.examassistapp.models.PaperResponse
 import com.examassistapp.R
 
 class PaperFragment : Fragment() {

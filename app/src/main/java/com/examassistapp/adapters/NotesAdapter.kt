@@ -8,7 +8,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.examassistapp.Models.PaperResponse
+import com.examassistapp.models.PaperResponse
 import com.examassistapp.R
 import com.examassistapp.ViewUtils
 

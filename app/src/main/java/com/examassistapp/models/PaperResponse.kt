@@ -1,4 +1,4 @@
-package com.examassistapp.Models
+package com.examassistapp.models
 
 data class PaperResponse(
 
