@@ -1,53 +1,55 @@
 package com.examassistapp.models
 
-import com.google.gson.annotations.SerializedName
+import com.google.firebase.firestore.PropertyName
+import com.google.j2objc.annotations.Property
 
 data class Document(
-    @SerializedName("avg_rating")
-    val averageRating: String,
+    @get:PropertyName("avg_rating") @set:PropertyName("avg_rating")
+    var averageRating: Double = 0.0,
 
-    @SerializedName("branch")
-    val branch: String,
+    @get:PropertyName("branch") @set:PropertyName("branch")
+    var branch: String = "",
 
-    @SerializedName("doc_id")
-    val documentId: String,
+    @get:PropertyName("doc_id") @set:PropertyName("doc_id")
+    var documentId: String = "",
 
-    @SerializedName("doc_type")
-    val documentType: Int,
+    @get:PropertyName("doc_type") @set:PropertyName("doc_type")
+    var documentType: String="",
 
-    @SerializedName("is_premium")
-    val isPremium: String,
+    @get:PropertyName("is_premium") @set:PropertyName("is_premium")
+    var isPremium: Int = 0,
 
-    @SerializedName("paper_year")
-    val paperYear: String,
+    @get:PropertyName("paper_year") @set:PropertyName("paper_year")
+    var paperYear: String = "",
 
-    @SerializedName("rating_count")
-    val ratingCount: String,
+    @get:PropertyName("rating_count") @set:PropertyName("rating_count")
+    var ratingCount: Double = 0.0,
 
-    @SerializedName("sub_count_aktu")
-    val subject_code_aktu: String,
+    @get:PropertyName("sub_count_aktu") @set:PropertyName("sub_count_aktu")
+    var subject_code_aktu: String = "",
 
-    @SerializedName("sub_count_mjpru")
-    val subject_code_mjpru: String,
+    @get:PropertyName("sub_count_mjpru") @set:PropertyName("sub_count_mjpru")
+    var subject_code_mjpru: String = "",
 
-    @SerializedName("sub_count")
-    val subject_code: String,
+    @get:PropertyName("sub_count") @set:PropertyName("sub_count")
+    var subject_code: String = "",
 
-    @SerializedName("tag")
-    val documentTags: String,
+    @get:PropertyName("tag") @set:PropertyName("tag")
+    var documentTags: String = "",
 
-    @SerializedName("title")
-    val documentTitle: String,
+    @get:PropertyName("title") @set:PropertyName("title")
+    var documentTitle: String="",
 
-    @SerializedName("upload_date")
-    val uploadDate: String,
+    @get:PropertyName("upload_date") @set:PropertyName("upload_date")
+    var uploadDate: String = "",
 
-    @SerializedName("uploader_id")
-    val uploaderId: String,
+    @get:PropertyName("uploader_id") @set:PropertyName("uploader_id")
+    var uploaderId: String = "",
 
-    @SerializedName("uploader_name")
-    val uploaderName: String,
+    @get:PropertyName("uploader_name") @set:PropertyName("uploader_name")
+    var uploaderName: String = "",
 
-    @SerializedName("view_count")
-    val viewCount: String,
+    @get:PropertyName("view_count") @set:PropertyName("view_count")
+    var viewCount: Long=0,
     )
+

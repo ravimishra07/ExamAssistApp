@@ -8,11 +8,11 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.examassistapp.models.PaperResponse
 import com.examassistapp.R
 import com.examassistapp.ViewUtils
+import com.examassistapp.models.Document
 
-class NotesAdapter(private val context: Context, private val data: Array<PaperResponse>) :
+class NotesAdapter(private val context: Context, private val data: List<Document>) :
     RecyclerView.Adapter<NotesAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -25,9 +25,10 @@ class NotesAdapter(private val context: Context, private val data: Array<PaperRe
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val foodlist: PaperResponse = data[position]
-        holder.txt_name.text = foodlist.name
-        val firstLetter = foodlist.name.substring(0,1)
+        val foodList: Document = data.get(position)
+
+        holder.txt_name.text = foodList.documentTitle
+        val firstLetter = foodList.documentTitle.substring(0,1)
         holder.tv_name_icon.text = firstLetter
         holder.ll_notes.background = ViewUtils.instance.drawCircle(
             ContextCompat.getColor(

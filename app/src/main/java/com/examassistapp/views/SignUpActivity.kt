@@ -17,7 +17,7 @@ import com.examassistapp.databinding.ActivitySignUpBinding
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import dagger.hilt.android.AndroidEntryPoint
+//import dagger.hilt.android.AndroidEntryPoint
 
 //@AndroidEntryPoint
 class SignUpActivity : AppCompatActivity() {

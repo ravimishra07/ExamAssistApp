@@ -16,7 +16,6 @@ import com.examassistapp.databinding.ActivityLoginBinding
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import dagger.hilt.android.AndroidEntryPoint
 
 //@AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
@@ -46,13 +45,13 @@ class LoginActivity : AppCompatActivity() {
 
         loginLayout!!.setOnClickListener {
 
-            val Email = ed_email!!.getText().toString()
-            val password = ed_password!!.getText().toString()
+            val Email = ed_email!!.text.toString()
+            val password = ed_password!!.text.toString()
 
             if (TextUtils.isEmpty(Email)) {
-                Toast.makeText(getApplicationContext(), "Enter email!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(LoginActivity@this, "Enter email!", Toast.LENGTH_SHORT).show()
             } else if(TextUtils.isEmpty(password)){
-                Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(LoginActivity@this, "Enter password!", Toast.LENGTH_SHORT).show()
             } else{
                 doLogin(Email, password)
             }
@@ -61,16 +60,20 @@ class LoginActivity : AppCompatActivity() {
 
     private fun doLogin(email: String, password: String) {
         auth!!.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this@LoginActivity, OnCompleteListener<AuthResult?> { task ->
-                    if (!task.isSuccessful) {
-                        // there was an error
-                        Toast.makeText(this@LoginActivity, "Authentication failed." + task.exception, Toast.LENGTH_LONG).show()
-                        Log.e("MyTag", task.exception.toString())
-                    } else {
+            .addOnCompleteListener(this@LoginActivity) { task ->
+                if (!task.isSuccessful) {
+                    // there was an error
+                    Toast.makeText(
+                        this@LoginActivity,
+                        "Authentication failed." + task.exception,
+                        Toast.LENGTH_LONG
+                    ).show()
+                    Log.e("MyTag", task.exception.toString())
+                } else {
 //                        val intent = Intent(this@LoginActivity, Sign_out::class.java)
 //                        startActivity(intent)
 //                        finish()
-                    }
-                })
+                }
+            }
     }
 }

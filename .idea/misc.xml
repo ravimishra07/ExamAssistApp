@@ -19,6 +19,15 @@
     <option name="pathToUserRulesConfiguration" value="" />
     <option name="pathToJarWithRules" value="" />
   </component>
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.11676798378926039" />
+        <entry key="app/src/main/res/layout/activity_test.xml" value="0.16304347826086957" />
+        <entry key="app/src/main/res/layout/notes_list.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
   <component name="FindBugsConfigurable">
     <option name="make" value="true" />
     <option name="effort" value="default" />
