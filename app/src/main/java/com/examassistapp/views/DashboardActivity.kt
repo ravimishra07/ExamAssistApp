@@ -3,9 +3,8 @@ package com.examassistapp.views
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
-import com.examassistapp.Fragments.NotesFragment
+import com.examassistapp.views.fragments.NotesFragment
 import com.examassistapp.Fragments.PaperFragment
 import com.examassistapp.Fragments.SyllabusFragment
 import com.examassistapp.R

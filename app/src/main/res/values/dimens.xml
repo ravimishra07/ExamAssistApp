@@ -4,4 +4,5 @@
     <dimen name="onboarding_text_bottom_margin">150dp</dimen>
     <dimen name="onboarding_text_size">24sp</dimen>
     <dimen name="ic_star_dimes">18dp</dimen>
+    <dimen name="placeholder_tv_height">24dp</dimen>
 </resources>

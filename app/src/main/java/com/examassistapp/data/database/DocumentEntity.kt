@@ -7,7 +7,8 @@ import com.examassistapp.utils.Constants.Companion.DOCUMENT_TABLE
 
 @Entity(tableName = DOCUMENT_TABLE)
 class DocumentEntity(
-    @PrimaryKey(autoGenerate = true)
-    var id: Int,
-    var result: Document
-)
+    var document: List<Document>
+){
+    @PrimaryKey(autoGenerate = false)
+    var id: Int = 0
+}

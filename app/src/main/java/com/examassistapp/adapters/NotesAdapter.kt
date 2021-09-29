@@ -7,40 +7,54 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.examassistapp.R
 import com.examassistapp.ViewUtils
 import com.examassistapp.models.Document
+import com.examassistapp.utils.DocumentDiffUtil
 
-class NotesAdapter(private val context: Context, private val data: List<Document>) :
-    RecyclerView.Adapter<NotesAdapter.ViewHolder>() {
-
+class NotesAdapter : RecyclerView.Adapter<NotesAdapter.ViewHolder>() {
+    private var doc = emptyList<Document>()
+    var cxt: Context? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        var view: View = LayoutInflater.from(context).inflate(R.layout.notes_list, parent, false)
+        var view: View = LayoutInflater.from(parent.context).inflate(R.layout.notes_list, parent, false)
+        cxt = parent.context
         return ViewHolder(view)
     }
 
     override fun getItemCount(): Int {
-        return data.size
+        return doc.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val foodList: Document = data.get(position)
+        val foodList: Document = doc[position]
 
-        holder.txt_name.text = foodList.documentTitle
+        holder.docTitle.text = foodList.documentTitle
         val firstLetter = foodList.documentTitle.substring(0,1)
-        holder.tv_name_icon.text = firstLetter
-        holder.ll_notes.background = ViewUtils.instance.drawCircle(
-            ContextCompat.getColor(
-                context,
-                ViewUtils.instance.colorGenerator()
+        holder.docFirstName.text = firstLetter
+        cxt?.let {
+            holder.llNotes.background = ViewUtils.instance.drawCircle(
+                ContextCompat.getColor(
+                    it,
+                    ViewUtils.instance.colorGenerator()
+                )
             )
-        )
+        }
+
     }
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val txt_name = itemView.findViewById<TextView>(R.id.txt_name)
-        val ll_notes = itemView.findViewById<LinearLayout>(R.id.ll_notes_icon)
-        val tv_name_icon = itemView.findViewById<TextView>(R.id.tv_name_icon)
+        val docTitle: TextView = itemView.findViewById(R.id.txt_name)
+        val llNotes: LinearLayout = itemView.findViewById(R.id.ll_notes_icon)
+        val docFirstName: TextView = itemView.findViewById(R.id.tv_name_icon)
 
+    }
+
+    fun setData(newData: List<Document>){
+        val recipesDiffUtil =
+            DocumentDiffUtil(doc, newData)
+        val diffUtilResult = DiffUtil.calculateDiff(recipesDiffUtil)
+        doc = newData
+        diffUtilResult.dispatchUpdatesTo(this)
     }
 }

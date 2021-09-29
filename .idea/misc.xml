@@ -25,6 +25,8 @@
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.11676798378926039" />
         <entry key="app/src/main/res/layout/activity_test.xml" value="0.16304347826086957" />
         <entry key="app/src/main/res/layout/notes_list.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/paper_list.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/placeholder_row_layout.xml" value="0.23550724637681159" />
       </map>
     </option>
   </component>
